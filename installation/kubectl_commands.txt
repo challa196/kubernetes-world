@@ -59,3 +59,8 @@ kubectl scale --replicas=3 deploy mydeployments
 kubectl rollout status deployment mydeployments
 //Command to rollback to the old version
 kubectl rollout undo deployment mydeployments
+
+ deployment is responsible for managing and deploying resources (such as pods) and ensuring that they run with the desired configuration, including any changes made to the application.
+A deployment ensures that a specified number of identical pods are running at all times. When you apply changes (e.g., updating a container image or modifying configuration), the deployment automatically handles the updates to the pods.
+
+In Kubernetes, a rollout refers to the process of deploying or updating an application managed by a Deployment or StatefulSet. It involves gradually updating pods with new configurations, such as changes in container images or environment variables, ensuring that the update happens with minimal downtime.
