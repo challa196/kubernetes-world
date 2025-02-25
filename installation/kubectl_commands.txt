@@ -64,3 +64,20 @@ kubectl rollout undo deployment mydeployments
 A deployment ensures that a specified number of identical pods are running at all times. When you apply changes (e.g., updating a container image or modifying configuration), the deployment automatically handles the updates to the pods.
 
 In Kubernetes, a rollout refers to the process of deploying or updating an application managed by a Deployment or StatefulSet. It involves gradually updating pods with new configurations, such as changes in container images or environment variables, ensuring that the update happens with minimal downtime.
+
+To clarify:
+Namespace is a logical grouping of resources.
+It is not just for pods but can contain a variety of Kubernetes resources like:
+Pods
+Services
+Deployments
+ReplicaSets
+ConfigMaps
+Secrets
+And many other resources
+Key Points:
+Grouping of Resources: A namespace is like a container or logical partition that holds a set of Kubernetes resources together. For example, all pods related to a particular application or environment (such as development, testing, or production) can be grouped in the same namespace.
+
+Isolation: Namespaces provide logical isolation. Resources within one namespace cannot interact with resources in another namespace unless explicitly allowed (e.g., via services or networking).
+
+Multi-Tenancy: In a multi-tenant Kubernetes cluster, namespaces help separate and isolate resources for different teams or projects. For instance, one team might use the dev namespace for development work, while another team uses the prod namespace for production
