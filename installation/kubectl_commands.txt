@@ -1,5 +1,16 @@
 kubectl get nodes
-kubectl run app1-pod --image=nginx:latest
+kubectl run app1-pod --image=nginx:latest 
+""""kubectl run → Creates a new Pod.
+app1-pod → The name of the Pod.
+--image=nginx:latest → Specifies the container image to use (nginx:latest in this case).
+
+Explanation:
+Kubernetes will pull the Nginx container image (nginx:latest) from Docker Hub (or another configured registry).
+A Pod named app1-pod will be created.
+Inside this Pod, there will be one container running Nginx.
+Nginx will serve its default web page on port 80
+
+
 kubectl get pods
 kubectl describe pod app1-pod
 kubectl get pods							
