@@ -1,3 +1,4 @@
+kubectl get nodes
 kubectl run app1-pod --image=nginx:latest
 kubectl get pods
 kubectl describe pod app1-pod
